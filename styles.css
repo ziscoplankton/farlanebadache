@@ -67,7 +67,7 @@ body {
 
 .page {
   /* 80% on small screens, 60% on big screens (see media query) */
-  max-width: 80%;
+  max-width: 100%;
   margin: 0 auto;
   padding: var(--space-lg) var(--space-md) var(--space-xl);
 }
@@ -494,7 +494,7 @@ body {
   margin-top: var(--space-section);
 }
 
-.faq-caption {
+.faq-copy {
   margin-bottom: var(--space-lg);
 }
 
@@ -568,7 +568,7 @@ body {
   padding-bottom: var(--space-lg);
 }
 
-@media (min-width: 680px){
+@media (min-width: 980px){
   .faq-grid {
     display: flex;
     gap:var(--space-lg);
@@ -600,6 +600,7 @@ body {
   border: 1px solid var(--ink-15);
   border-radius: 1.5rem;
   padding: var(--space-xl);
+  background-color: var(--card-details-background);
 }
 
 .contact-caption {
@@ -612,7 +613,7 @@ body {
 .contact-heading {
   font-size: var(--font-sz-lg);
   font-weight: 700;
-  color: var(--ink);
+  color: var(--main-title);
   margin: 0 0 var(--space-md);
 }
 
@@ -683,7 +684,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: var(--space-lg);
-  background: rgba(26, 26, 26, 0.01);
+  background: var(--bg);
   border-radius: 1.25rem;
   padding: var(--space-xl);
 }
@@ -724,7 +725,7 @@ body {
   border-width: 0.075em;
   border-style: solid;
   border-color:#C7BCA9;
-  background-color: #ffffff99;
+  background-color: var(--card-details-background);
   color: var(--main-title);
   font-weight: 200;
 }
@@ -732,6 +733,8 @@ body {
 .form-field input:not(:placeholder-shown),
 .form-field textarea:not(:placeholder-shown) {
   font-weight: 100;
+  background-color: var(--eyebrow-accent-background);
+
 }
 
 .form-submit {
@@ -754,6 +757,23 @@ body {
   color: var(--card-details-background);
 }
 
+@media(min-width: 1080px){
+    .contact{
+        width: 100%;
+    }
+    .contact-card{
+        flex-direction: row;
+        padding: var(--space-xxl);
+
+    }
+    .contact-info,
+    .contact-form {
+        flex: 1;
+    }
+    .page{
+        width: 90%;
+    }
+}
 @media (min-width: 1480px) {
   .contact {
     width: 60%;
