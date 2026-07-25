@@ -23,7 +23,8 @@
   --font-sz-md: clamp(1rem, 1.2vw, 2rem);
   --font-sz-md: clamp(1.5rem, 1.6vw, 4rem);
   --font-sz-lg: clamp(1.7rem, 2vw, 5rem);
-  --font-sz-eyebrow: clamp(0.8rem, 1vw, 0.8rem);
+  --font-sz-eyebrow: clamp(0.6rem, 1vw, 0.8rem);
+  --font-sz-hero-copy:clamp(1.2rem, 1.15vw, 1.9rem);
 
   --bg: #f8f8f8;
   --ink: #1a1a1a;
@@ -111,7 +112,7 @@ body {
 }
 
 .hero-copy {
-  font-size: var(--font-sz-md);
+  font-size: var(--font-sz-hero-copy);
   line-height: 1.15;
   color: var(--ink-40);
   font-weight: 300;
@@ -734,7 +735,7 @@ body {
 .form-field textarea:not(:placeholder-shown) {
   font-weight: 100;
   background-color: var(--eyebrow-accent-background);
-
+  color:var(--main-title);
 }
 
 .form-submit {
