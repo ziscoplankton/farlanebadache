@@ -892,7 +892,19 @@ body {
   opacity: 1;
   color: var(--card-details-background);
 }
+.form-status {
+  margin-top: var(--space-sm, 0.75rem);
+  font-size: 0.9rem;
+  min-height: 1.2em;
+}
 
+.form-status.is-success {
+  color: #2e7d32;
+}
+
+.form-status.is-error {
+  color: #c62828;
+}
 @media(min-width: 680px){
   .form-submit {
   padding: var(--space-md);
