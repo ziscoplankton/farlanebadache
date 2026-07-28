@@ -899,11 +899,25 @@ body {
 }
 
 .form-status.is-success {
-  color: #2e7d32;
+  color: var(--main-title);
 }
 
 .form-status.is-error {
   color: #c62828;
+}
+
+.form-submit.is-loading {
+  animation: pulse-opacity 1.1s ease-in-out infinite;
+  cursor: default;
+}
+
+@keyframes pulse-opacity {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.45;
+  }
 }
 @media(min-width: 680px){
   .form-submit {
