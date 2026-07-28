@@ -32,7 +32,7 @@
   --fs-caption:    clamp(0.85rem, 0.75rem + 0.4vw, 1rem);
   --fs-body-sm:    clamp(0.95rem, 0.85rem + 0.35vw, 1.1rem);
   --fs-body:       clamp(1rem, 0.9rem + 0.4vw, 1.2rem);
-  --fs-hero-copy:  clamp(1rem, 1.35rem, 1.75rem);
+  --fs-hero-copy:  clamp(1rem, 1.35rem, .5rem);
   --fs-heading-sm: clamp(1.15rem, 1rem + 0.8vw, 1.6rem);
   --fs-heading-md: clamp(1.4rem, 1.1rem + 1.4vw, 2.2rem);
   --fs-heading-lg: clamp(1.9rem, 1.3rem + 4.2vw, 2.5rem);
