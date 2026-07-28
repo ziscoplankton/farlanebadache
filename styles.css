@@ -1,12 +1,3 @@
-@font-face {
-    font-family: 'Chillax';
-    src: url('fonts/Chillax-Light.otf') format('woff2'),
-         url('fonts/Chillax-Light.otf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-
 :root {
   /* avatar scales with viewport, never rearranges */
   --avatar-size: clamp(164px, 25vw, 256px);
@@ -876,7 +867,7 @@ body {
 .form-submit {
   font: inherit;
   font-size: var(--fs-body-sm);
-  font-weight: var(--fw-eyebrow);
+  font-weight: var(--fw-body);
   letter-spacing: var(--ls-eyebrow);
   color: #ffffff99;
   background: var(--ink);
