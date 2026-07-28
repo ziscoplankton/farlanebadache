@@ -38,8 +38,8 @@
   --fs-heading-lg: clamp(1.9rem, 1.3rem + 4.2vw, 2.5rem);
 
   /* -- Font weights, by role -- */
-  --fw-eyebrow:      200;
-  --fw-caption:      300;
+  --fw-eyebrow:      250;
+  --fw-caption:      400;
   --fw-body:         300;
   --fw-body-strong:  400;
   --fw-heading:      700;
@@ -750,12 +750,12 @@ body {
 
 .contact-socials {
   display: flex;
-  gap: var(--space-sm);
+  gap: var(--space-md);
 }
 
 .social-icon {
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   border-radius: 0.75rem;
   background: rgba(26, 26, 26, 0.05);
   color: var(--ink);
@@ -763,11 +763,12 @@ body {
   align-items: center;
   justify-content: center;
   text-decoration: none;
+  margin-top:var(--space-md);
 }
 
 .social-icon svg {
-  width: 18px;
-  height: 18px;
+  width: 22px;
+  height: 22px;
 }
 .social-icon--brand {
   position: relative;
@@ -775,8 +776,8 @@ body {
 }
 
 .social-icon--brand svg {
-  width: 18px;
-  height: 18px;
+  width: 22px;
+  height: 22px;
 }
 
 .icon-bw {
@@ -792,17 +793,21 @@ body {
   transition: clip-path 0.35s ease;
 }
 
-.social-icon--brand:hover .icon-bw {
+.social-icon--brand:hover .icon-bw,
+.social-icon--brand.is-revealed .icon-bw {
   opacity: 0;
 }
 
-.social-icon:hover {
+.social-icon:hover,
+.social-icon.is-revealed {
     background-color: var(--eyebrow-accent-background);
 }
 
-.social-icon--brand:hover .icon-color {
+.social-icon--brand:hover .icon-color,
+.social-icon--brand.is-revealed .icon-color {
   clip-path: inset(0% 0 0 0);     /* fully revealed */
 }
+
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -884,6 +889,10 @@ body {
 @media(min-width: 680px){
   .form-submit {
   padding: var(--space-md);
+  }
+  .contact-socials {
+    display: flex;
+    gap: var(--space-sm);
   }
 }
 @media(min-width: 1080px){
