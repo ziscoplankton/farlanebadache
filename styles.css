@@ -897,8 +897,12 @@ body {
   color: #c62828;
 }
 
-.form-submit.is-loading {
+.form-submit-text.is-loading {
+  display: inline-block;
   animation: pulse-opacity 1.1s ease-in-out infinite;
+}
+
+.form-submit:disabled {
   cursor: default;
 }
 
