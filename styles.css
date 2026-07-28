@@ -252,6 +252,12 @@ body {
   
 }
 
+@media (max-width: 679px) {
+  .section-heading {
+    margin-bottom: var(--space-md);   /* bump from --space-sm (0.5rem) to --space-md (1rem) */
+  }
+}
+
 
 /* ---------- Projects ---------- */
 
