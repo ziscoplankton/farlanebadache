@@ -196,10 +196,29 @@ body {
     /* background-color: var(--golden-eyebrow-background); */
 }
 
-.role-bullet{
-  color:#159a55;
-  margin-right: var(--space-sm)
+.role-bullet {
+  color: #159a55;
+  margin-right: var(--space-sm);
+  animation: pulse-dot 2.8s ease-in-out infinite;
 }
+
+@keyframes pulse-dot {
+  0%, 100% {
+    opacity: 1;
+    scale: 1;
+  }
+  50% {
+    opacity: 0.15;
+    scale: 0.9;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .role-bullet {
+    animation: none;
+  }
+}
+
 
 @media (min-width: 680px) {
     .hero {
