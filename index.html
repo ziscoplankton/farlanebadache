@@ -502,6 +502,7 @@
                 status.className = 'form-status';
                 button.disabled = true;
                 button.textContent = 'Sending...';
+                button.classList.add('is-loading');
 
                 fetch(form.action, {
                 method: 'POST',
@@ -524,6 +525,7 @@
                 .finally(function () {
                     button.disabled = false;
                     button.textContent = 'Start';
+                    button.classList.remove('is-loading');
                 });
             });
             })();
