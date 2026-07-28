@@ -42,7 +42,7 @@
   --fw-caption:      400;
   --fw-body:         300;
   --fw-body-strong:  400;
-  --fw-heading:      700;
+  --fw-heading:      600;
   --fw-thin:         100;
 
   /* -- Letter spacing, by role -- */
@@ -122,10 +122,7 @@ body {
   grid-row: 2;              /* was: 1 / 3 — now starts at row 2, same row as copy */
   width: 100%;
   aspect-ratio: 1 / 1;
-  padding: 0.25rem;                          /* creates the visible "mat" border */
-  background-color: #ffe8b634;   /* your existing off-white token */
-  border-radius: 1.75rem;                              /* slightly bigger than the img radius so both corners nest evenly */
-  box-shadow: 0 5px 5px rgba(245, 167, 77, 0.15);       /* shadow now lives on the frame, not the image */
+  border-radius: 2rem;                              /* slightly bigger than the img radius so both corners nest evenly */
 }
 
 .avatar-container img {
@@ -272,8 +269,8 @@ body {
   font-weight: var(--fw-body);
   margin: 0 0 var(--space-md);
   letter-spacing: var(--ls-body);
-  
 }
+
 
 @media (max-width: 679px) {
   .section-heading {
@@ -558,10 +555,10 @@ body {
   width: 100%;
   max-width: 340px;
   margin: 0 auto;
-  padding: 0.325rem;                          /* creates the visible "mat" border */
+  padding: 0rem;                          /* creates the visible "mat" border */
   background-color: #ffe8b634;   /* your existing off-white token */
   border-radius: 1.5rem;                              /* slightly bigger than the img radius so both corners nest evenly */
-  box-shadow: 0 20px 40px rgba(245, 167, 77, 0.2);      /* shadow now lives on the frame, not the image */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);      /* shadow now lives on the frame, not the image */
 }
 
 .about-image-container img {
