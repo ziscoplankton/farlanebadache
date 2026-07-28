@@ -23,12 +23,15 @@
   --font-sz-md: clamp(1rem, 1.2vw, 2rem);
   --font-sz-md: clamp(1.5rem, 1.6vw, 4rem);
   --font-sz-lg: clamp(1.7rem, 2vw, 5rem);
-  --font-sz-eyebrow: clamp(0.6rem, 1vw, 0.8rem);
+  --font-sz-eyebrow: clamp(0.69rem, 1vw, 0.8rem);
   --font-sz-hero-copy:clamp(1rem, 1.05vw, 1.75rem);
+  --font-sz-projects-title: clamp(1.15rem, 1.2vw, 2rem);
 
   --bg: #f8f8f8;
   --ink: #1a1a1a;
-  --ink-40: #B9B6B0;
+  --ink-40: #B9B6B1;
+  --ink-card-focus: rgba(26, 26, 26, 0.45);
+  --ink-card-focus-p: rgba(26, 26, 26, 0.30);
   --ink-15: rgba(26, 26, 26, 0.12);
   --main-title: #716B60;
   --sections-title: #E0D6C4;
@@ -40,17 +43,17 @@
   --eyebrow-accent-border-color: #C7BCA975;
   --eyebrow-accent-color:#9E968675;
 
-  --golden-eyebrow-background:#FFF8E175;
-  --golden-eyebrow-border:#C7BCA975;
-  --golden-eyebrow-color:#9E968675;
+  --bkup-eyebrow-background:#FFF8E175;
+  --bkup-eyebrow-border:#C7BCA975;
+  --bkup-eyebrow-color:#9E968675;
+
+  --golden-eyebrow-background:#ffe8b678;
+  --golden-eyebrow-border:#f5a74d78;
+  --golden-eyebrow-color:#f5a74d;
 
 
   --card-details-background:#FCFBF9;
 
-
-  --bkgolden-eyebrow-background:#FCFBF9;
-  --bkgolden-eyebrow-border:#F9EFD5;
-  --bkgolden-eyebrow-color:#D5CFC3;
 
 }
 
@@ -125,6 +128,7 @@ body {
   flex-wrap: wrap;
   gap: var(--space-md);
   width: fit-content;
+  align-self: center;
 }
 
 /* ---------- Eyebrow / pill styling (shared) ---------- */
@@ -137,7 +141,7 @@ body {
   border-radius: 999px;
   padding: var(--space-sm) var(--space-xl);
   width: fit-content;
-  background-color: var(--golden-eyebrow-background);
+  background-color: var(--eyebrow-accent-background);
 
 }
 
@@ -159,6 +163,12 @@ body {
 
 .welcome.eye-brow {
     border-bottom-left-radius: 0;
+    /* background-color: var(--golden-eyebrow-background); */
+}
+
+.role-bullet{
+  color:#159a55;
+  margin-right: var(--space-sm)
 }
 
 @media (min-width: 680px) {
@@ -185,6 +195,31 @@ body {
     }
 }
 
+.section-caption {
+  color: var(--golden-eyebrow-color);
+  font-weight: 300;
+  letter-spacing: 0em;
+  margin-bottom: var(--space-sm);
+  text-transform: uppercase;
+}
+
+.section-heading {
+  font-size: var(--font-sz-lg);
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--main-title);
+  margin: 0 0 var(--space-lg);
+}
+
+.section-copy p {
+  font-size: var(--font-sz-sm);
+  line-height: 1.3;
+  color: var(--ink-card-focus-p);
+  font-weight: 300;
+  margin: 0 0 var(--space-md);
+  letter-spacing: -.35px;
+  
+}
 
 
 /* ---------- Projects ---------- */
@@ -211,10 +246,10 @@ body {
     padding: var(--space-sm) var(--space-md);
     border-radius: 99px;
     background-color: var(--eyebrow-accent-background);
-    color: var(--eyebrow-accent-color);
+    color: var(--golden-eyebrow-color);
     border-style:  solid;
     border-width: 1px;
-    border-color: var(--eyebrow-accent-border-color);
+    border-color: var(--golden-eyebrow-border);
     font-size: var(--font-sz-eyebrow);
     font-weight: 200;
     letter-spacing: 0.035em;
@@ -230,6 +265,7 @@ body {
   font-weight: 300;
   color: var(--main-title);
   margin: 0 0 var(--space-sm);
+  font-size: var(--font-sz-projects-title);
 }
 
 .project-preview {
@@ -253,13 +289,18 @@ body {
 
 .project-details {
     background-color: var(--card-details-background);
-    border-radius: 0 0 0rem 0rem;
+    border-radius: 0 0 .5rem .5rem;
     padding: var(--space-sm) var(--space-lg) var(--space-lg) var(--space-lg);
     border: 1px solid var(--ink-15);
     color: var(--ink-40);
     font-weight: 200;
 }
 
+.service-list {
+  color: #716B6095;
+  font-weight: 200;
+  margin-top: var(--space-md)
+}
 
 
 .tag-row:last-child {
@@ -295,11 +336,11 @@ body {
         margin: var(--space-section) auto;
     }
     .projects {
-        width: 60%;
+        width: 80%;
         margin: var(--space-section) auto;
     }
     .project-card {
-        width: 50%;
+        width: 100%;
     }
 }
 
@@ -320,7 +361,9 @@ body {
 }
 
 .service-card {
-  border: 1px solid var(--ink-15);
+  border-color:var(--ink-15);
+  border-style: solid;
+  border-width: 1px;
   border-radius: 1.5rem;
   padding: var(--space-lg);
   background-color: var(--card-details-background);
@@ -330,9 +373,9 @@ body {
   width: 44px;
   height: 44px;
   border-radius: 999px;
-  background:var(--eyebrow-accent-background);
-  color: var(--eyebrow-accent-color);
-  border: 1.5px var(--eyebrow-accent-border-color) solid;
+  background:var(--golden-eyebrow-background);
+  color: var(--golden-eyebrow-color);
+  border: 1.5px var(--golden-eyebrow-border) solid;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -347,16 +390,41 @@ body {
 .service-title {
   font-size: var(--font-sz-sm);
   font-weight: 300;
-  color: var(--main-title);
+  color: var(--ink-card-focus);
   margin: 0 0 var(--space-sm);
 }
 
 .service-copy {
   font-size: var(--font-sz-sm);
   line-height: 1.4;
-  color: var(--ink-40);
+  color: var(--ink-card-focus-p);
   font-weight: 200;
   margin: 0;
+}
+
+.card-focus {
+  background-color: var(--golden-eyebrow-background);
+  border-color: var(--golden-eyebrow-border);
+  border-width: 1px;
+  border-style: solid;
+}
+
+.card-focus .service-icon {
+  background-color: var(--card-details-background);
+  color: var(--golden-eyebrow-color);
+  border-color: var(--golden-eyebrow-border);
+}
+
+.card-focus h3 {
+  color: var(--ink-card-focus);
+}
+
+.card-focus p {
+  color: var(--ink-40);
+}
+
+.card-focus .service-list {
+  color: #716B6095;
 }
 
 @media (min-width:680px) {
@@ -370,7 +438,7 @@ body {
 }
 @media (min-width: 1480px) {
     .services{
-        width: 60%;
+        width: 80%;
         margin-top: var(--space-section);
         margin: var(--space-section) auto;
     }
@@ -394,6 +462,16 @@ body {
   flex-direction: column;
   gap: var(--space-xl);
 }
+.about-card {
+  width: 90%;
+  margin: 0 auto;
+  padding: var(--space-xxl) var(--space-xl);
+  background-color: var(--card-details-background);
+  border-radius: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
 
 .about-main {
   display: flex;
@@ -405,30 +483,6 @@ body {
   flex: 1;
 }
 
-.about-caption {
-  color: var(--accent-colour);
-  font-weight: 200;
-  letter-spacing: 0.04em;
-  margin-bottom: var(--space-sm);
-  text-transform: uppercase;
-}
-
-.about-heading {
-  font-size: var(--font-sz-lg);
-  font-weight: 500;
-  line-height: 1.15;
-  color: var(--main-title);
-  margin: 0 0 var(--space-lg);
-}
-
-.about-copy p {
-  font-size: var(--font-sz-sm);
-  line-height: 1.3;
-  color: var(--ink-40);
-  font-weight: 300;
-  margin: 0 0 var(--space-md);
-}
-
 .about-copy p:last-child {
   margin-bottom: 0;
 }
@@ -436,8 +490,8 @@ body {
 .about-copy-full {
   font-size: var(--font-sz-sm);
   line-height: 1.5;
-  color: var(--ink-40);
-  font-weight: 300;
+  color: var(--ink-card-focus-p);
+  font-weight: 200;
   margin: 0;
 }
 
@@ -461,29 +515,41 @@ body {
   position: absolute;
   left: var(--space-md);
   bottom: var(--space-md);
-  color: var(--card-details-background);
+  color: var(--bg);
   font-size: 0.8rem;
-  font-weight: 300;
+  font-weight: 200;
   padding: var(--space-sm) var(--space-md);
   border-radius: 999px;
 
   /* glass effect */
-  background: #FFF8E145;   /* lighter, more transparent than before */
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);      /* Safari support */
-  border: 0.5px solid rgba(255, 255, 255, 0.3);
+  background: var(--main-title);   /* lighter, more transparent than before */
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(10px);      
+  border: 1px solid var(--ink-15)
 }
 
 @media (min-width: 1480px) {
-  .about {
+  .about-card{
+    width: 100%;
+    padding: var(--space-xxl) var(--space-xxxl);
+
+  }
+  
+  .about-main {
     width: 60%;
-    margin: var(--space-section) auto;
+    margin: var(--space-sm) auto 0;
   }
 
   .about-main {
     flex-direction: row;
     align-items: center;
+    justify-content: center;
     gap: var(--space-xxl);
+  }
+
+  .about-copy-full {
+    width: 60%;
+    margin: var(--space-sm) auto 0;
   }
 
   .about-image-container {
@@ -508,16 +574,13 @@ body {
 }
 
 .faq-item {
-  border: 1px solid var(--eyebrow-accent-border-color);
+  border: 1px solid var(--ink-15);
   border-radius: 1.25em;
   margin-bottom:var(--space-md);
   padding: var(--space-sm) var(--space-md);
   background: var(--card-details-background);
 }
 
-.faq-item:first-child {
-  border-top: 1px solid var(--ink-15);
-}
 
 .faq-question {
   width: 100%;
@@ -531,7 +594,8 @@ body {
   padding: var(--space-lg) 0;
   font: inherit;
   font-size: var(--font-sz-sm);
-  color: var(--main-title);
+  font-weight: 300;
+  color: var(--ink-card-focus);
   text-align: left;
 
 }
@@ -560,7 +624,7 @@ body {
   padding-bottom: 0;
   font-size: var(--font-sz-sm);
   line-height: 1.5;
-  color: var(--ink-40);
+  color: var(--ink-card-focus-p);
   font-weight: 200;
 }
 
@@ -585,7 +649,7 @@ body {
 
 @media (min-width: 1480px) {
   .faq {
-    width: 60%;
+    width: 70%;
     margin: var(--space-section) auto;
   }
 }
@@ -701,7 +765,7 @@ body {
 
 .form-label {
   font-size: var(--font-sz-eyebrow);
-  color: var(--main-title);
+  color: var(--ink-card-focus);
   letter-spacing: 0.025em;
 }
 
@@ -709,7 +773,7 @@ body {
 .form-field textarea {
   font: inherit;
   font-size: var(--font-sz-sm);
-  color: var(--ink);
+  color: var(--ink-card-focus-p);
   background: var(--card-details-background);
   border: 1px solid var(--ink-15);
   border-radius: 0.75rem;
@@ -719,7 +783,7 @@ body {
 
 .form-field input::placeholder,
 .form-field textarea::placeholder {
-  color: var(--ink-40);
+  color: var(--ink-card-focus-p);
   font-weight: 200;
 }
 
@@ -728,8 +792,8 @@ body {
   outline: none;
   border-width: 0.075em;
   border-style: solid;
-  border-color:#C7BCA9;
-  background-color: var(--card-details-background);
+  border-color:var(--ink-40);
+  background-color:var(--card-details-background);
   color: var(--main-title);
   font-weight: 200;
 }
@@ -737,8 +801,9 @@ body {
 .form-field input:not(:placeholder-shown),
 .form-field textarea:not(:placeholder-shown) {
   font-weight: 100;
-  background-color: var(--eyebrow-accent-background);
+  background-color: var(--card-details-background);
   color:var(--main-title);
+  border-color: var(--ink-40);
 }
 
 .form-submit {
