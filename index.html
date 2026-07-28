@@ -421,7 +421,7 @@
                             <textarea name="message" placeholder="Tell me a bit about your project and what you are looking for. Do you have an existing business? Are you just starting out? The more information you share, the better I can respond." rows="5" required></textarea>
                         </label>
 
-                        <button type="submit" class="form-submit">Send message</button>
+                        <button type="submit" class="form-submit"><span class="form-submit-text">Send message</span></button>
                         <p class="form-status" aria-live="polite"></p>
                         </form>
                     </div>
@@ -494,6 +494,7 @@
             var form = document.querySelector('.contact-form');
             var status = form.querySelector('.form-status');
             var button = form.querySelector('.form-submit');
+            var buttonText = button.querySelector('.form-submit-text');
 
             form.addEventListener('submit', function (e) {
                 e.preventDefault();
@@ -501,8 +502,8 @@
                 status.textContent = '';
                 status.className = 'form-status';
                 button.disabled = true;
-                button.textContent = 'Sending...';
-                button.classList.add('is-loading');
+                buttonText.textContent = 'Sending...';
+                buttonText.classList.add('is-loading');
 
                 fetch(form.action, {
                 method: 'POST',
@@ -524,8 +525,8 @@
                 })
                 .finally(function () {
                     button.disabled = false;
-                    button.textContent = 'Start';
-                    button.classList.remove('is-loading');
+                    buttonText.textContent = 'Start';
+                    buttonText.classList.remove('is-loading');
                 });
             });
             })();
