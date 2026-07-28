@@ -22,10 +22,11 @@
 
   --font-sz-md: clamp(1rem, 1.2vw, 2rem);
   --font-sz-md: clamp(1.5rem, 1.6vw, 4rem);
-  --font-sz-lg: clamp(1.7rem, 2vw, 5rem);
+  --font-sz-lg: clamp(1.9rem, 2.1vw, 5.2rem);
   --font-sz-eyebrow: clamp(0.69rem, 1vw, 0.8rem);
   --font-sz-hero-copy:clamp(1rem, 1.05vw, 1.75rem);
   --font-sz-projects-title: clamp(1.15rem, 1.2vw, 2rem);
+  --font-sz-caption: clamp(0.9rem, 1.0vw, 1.1rem);
 
   --bg: #f8f8f8;
   --ink: #1a1a1a;
@@ -201,6 +202,7 @@ body {
   letter-spacing: 0em;
   margin-bottom: var(--space-sm);
   text-transform: uppercase;
+  font-size: var(--font-sz-caption);
 }
 
 .section-heading {
@@ -816,7 +818,7 @@ body {
   opacity: .98;
   border: none;
   border-radius: 999px;
-  padding: var(--space-md);
+  padding: var(--space-sm);
   cursor: pointer;
   transition: color 0.35s ease, opacity 0.35s ease;
 }
@@ -826,6 +828,11 @@ body {
   color: var(--card-details-background);
 }
 
+@media(min-width: 680px){
+  .form-submit {
+  padding: var(--space-md);
+  }
+}
 @media(min-width: 1080px){
     .contact{
         width: 100%;
