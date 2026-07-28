@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://farlanebadache.com.au/sitemap.xml
