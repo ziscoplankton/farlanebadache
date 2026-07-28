@@ -32,7 +32,7 @@ async function handleSubmit(request, env) {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          fields: { Name: name, Email: email, Message: message },
+          fields: { name: name, email: email, message: message },
         }),
       }
     );
