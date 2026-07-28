@@ -43,8 +43,7 @@ async function handleSubmit(request, env) {
       return new Response("Failed to submit form", { status: 502 });
     }
 
-    return Response.redirect(new URL("/?submitted=true", request.url), 303);
-  } catch (err) {
+    return new Response("OK", { status: 200 });  } catch (err) {
     console.error("Submit handler error:", err);
     return new Response("Something went wrong", { status: 500 });
   }
